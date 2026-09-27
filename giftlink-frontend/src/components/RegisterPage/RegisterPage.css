@@ -1,0 +1,16 @@
+.register-card {
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.register-card h2 {
+    color: #333333;
+}
+
+.register-card .form-control {
+    margin-top: 5px;
+}
+
+.register-card .btn {
+    margin-top: 10px;
+}
