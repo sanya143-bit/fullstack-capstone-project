@@ -1,28 +1,101 @@
-<!DOCTYPE html>
-<html lang="en">
+
+<!DOCTYPE html><html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GiftLink Home</title>
+    <title>GiftLink - Share More, Waste Less</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="/static/home.css">
 </head>
 <body>
     <div class="container my-5">
-        <div class="text-center">
-            <!-- Task 1: Add the main heading -->
-                /* insert code here */
-            
-            <!-- Task 2: Add the subheading -->
-                /* insert code here */
-            
-            <!-- Task 3: Add the inspirational quote -->
-                /* insert code here */
-            
-            <!-- Task 4: Add the 'Get Started' button -->
-                /* insert code here */
+        <div class="text-center content">
+            <h1>Welcome to GiftLink</h1>
+            <h2>Give Your Items a Second Life</h2>
+            <p class="lead">Share household items you no longer need and discover useful things in your community. Together, we can reduce waste and make a difference.</p>
+            <a href="/app" class="btn btn-primary">Get Started</a>
         </div>
     </div>
 </body>
 </html>
+EOFcat > public/static/home.css <<'EOF'
+body {
+margin: 0;
+min-height: 100vh;
+font-family: 'Montserrat', sans-serif;
+background: linear-gradient(135deg, #e0f7fa, #e8f5e9, #fff8e1);
+color: #243447;
+display: flex;
+align-items: center;
+justify-content: center;
+padding: 20px;
+position: relative;
+}
+
+body::before {
+content: "";
+position: fixed;
+inset: 0;
+background: radial-gradient(circle at top right, rgba(76, 175, 80, 0.18), transparent 45%);
+filter: blur(12px);
+pointer-events: none;
+}
+
+.content {
+position: relative;
+max-width: 850px;
+width: 100%;
+background: rgba(255, 255, 255, 0.92);
+padding: 55px 35px;
+border-radius: 22px;
+box-shadow: 0 12px 35px rgba(0, 0, 0, 0.12);
+}
+
+h1 {
+color: #18794e;
+font-size: clamp(2rem, 5vw, 3.4rem);
+font-weight: 700;
+margin-bottom: 20px;
+}
+
+h2 {
+color: #34495e;
+font-size: clamp(1.25rem, 3vw, 2rem);
+font-weight: 700;
+margin-bottom: 20px;
+}
+
+.lead {
+font-size: 1.05rem;
+line-height: 1.8;
+margin: 0 auto 30px;
+max-width: 680px;
+}
+
+.btn-primary {
+background-color: #198754;
+border-color: #198754;
+border-radius: 30px;
+padding: 12px 32px;
+font-size: 1rem;
+font-weight: 700;
+transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.btn-primary:hover {
+background-color: #146c43;
+border-color: #146c43;
+transform: translateY(-2px);
+}
+
+@media (max-width: 576px) {
+.content {
+padding: 35px 20px;
+}
+
+.lead {
+    font-size: 0.95rem;
+}
+
+}
